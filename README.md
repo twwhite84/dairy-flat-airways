@@ -6,4 +6,4 @@ To build and run on Windows:
 2. Run "./BuildWindows.ps1"
 3. Run "python manage.py runserver"
 
-This will create a virtual environment and switch to it, install packages specified in requirements.txt, apply the migrations and then populate the database from the fixtures.
+The build script will create a virtual environment and switch to it, install packages specified in requirements.txt, apply the migrations and then populate the database from the fixtures.
