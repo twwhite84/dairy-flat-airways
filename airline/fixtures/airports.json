@@ -1,0 +1,50 @@
+[
+  {
+    "model": "airline.Airport",
+    "pk": "1",
+    "fields": {
+      "code": "NZNE",
+      "description": "Dairy Flat"
+    }
+  },
+  {
+    "model": "airline.Airport",
+    "pk": "2",
+    "fields": {
+      "code": "YSSY",
+      "description": "Sydney"
+    }
+  },
+  {
+    "model": "airline.Airport",
+    "pk": "3",
+    "fields": {
+      "code": "NZRO",
+      "description": "Rotorua"
+    }
+  },
+  {
+    "model": "airline.Airport",
+    "pk": "4",
+    "fields": {
+      "code": "NZGB",
+      "description": "Claris"
+    }
+  },
+  {
+    "model": "airline.Airport",
+    "pk": "5",
+    "fields": {
+      "code": "NZCI",
+      "description": "Tuuta"
+    }
+  },
+  {
+    "model": "airline.Airport",
+    "pk": "6",
+    "fields": {
+      "code": "NZTL",
+      "description": "Lake Tekapo"
+    }
+  }
+]

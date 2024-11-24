@@ -1,0 +1,47 @@
+[
+  {
+    "model": "airline.Plane",
+    "pk": "1",
+    "fields": {
+      "code": "ZK-DFA",
+      "description": "SyberJet SJ30i",
+      "capacity": "6"
+    }
+  },
+  {
+    "model": "airline.Plane",
+    "pk": "2",
+    "fields": {
+      "code": "ZK-DFB",
+      "description": "Cirrus SF50",
+      "capacity": "4"
+    }
+  },
+  {
+    "model": "airline.Plane",
+    "pk": "3",
+    "fields": {
+      "code": "ZK-DFC",
+      "description": "Cirrus SF50",
+      "capacity": "4"
+    }
+  },
+  {
+    "model": "airline.Plane",
+    "pk": "4",
+    "fields": {
+      "code": "ZK-DFD",
+      "description": "HondaJet Elite",
+      "capacity": "5"
+    }
+  },
+  {
+    "model": "airline.Plane",
+    "pk": "5",
+    "fields": {
+      "code": "ZK-DFE",
+      "description": "HondaJet Elite",
+      "capacity": "5"
+    }
+  }
+]

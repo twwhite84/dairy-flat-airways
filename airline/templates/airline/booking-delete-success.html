@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="page-container">
+    <h1 class="page-header">BOOKING CANCELLED</h1>
+    <div class="page-panel">
+      <p>Your booking has been cancelled.</p>
+      <a href="{% url 'search' %}"><button class="btn-regular">View Flights</button></a>
+    </div>
+  </div>
+{% endblock %}

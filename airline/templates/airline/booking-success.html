@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="page-container">
+    <h1 class="page-header">BOOKING SUCCESSFUL</h1>
+    <div class="page-panel">
+      <p>Your booking has been made:</p>
+      <table>
+        <tr>
+          <td><b>Customer Code:</b></td>
+          <td>{{ customer_code }}</td>
+        </tr>
+        <tr>
+          <td><b>First Name:</b></td>
+          <td>{{ customer_first_name }}</td>
+        </tr>
+        <tr>
+          <td><b>Last Name:</b></td>
+          <td>{{ customer_last_name }}</td>
+        </tr>
+        {% if flight_outbound %}
+        <tr>
+          <td><b>Outbound:</b></td>
+          <td>{{ flight_outbound.route }}</td>
+        </tr>
+        <tr>
+          <td><b>Outbound Departure Date:</b></td>
+          <td>{{ flight_outbound_ddate }}</td>
+        </tr>
+        <tr>
+          <td><b>Outbound Departure Time:</b></td>
+          <td>{{ flight_outbound_dtime }}</td>
+        </tr>
+        <tr>
+          <td><b>Outbound Arrival Date:</b></td>
+          <td>{{ flight_outbound_adate }}</td>
+        </tr>
+        <tr>
+          <td><b>Outbound Arrival Time:</b></td>
+          <td>{{ flight_outbound_atime }}</td>
+        </tr>
+        {% endif %}
+        {% if flight_inbound %}
+        <tr>
+          <td><b>Inbound:</b></td>
+          <td>{{ flight_inbound.route }}</td>
+        </tr>
+        <tr>
+          <td><b>Inbound Departure Date:</b></td>
+          <td>{{ flight_inbound_ddate }}</td>
+        </tr>
+        <tr>
+          <td><b>Inbound Departure Time:</b></td>
+          <td>{{ flight_inbound_dtime }}</td>
+        </tr>
+        <tr>
+          <td><b>Inbound Arrival Date:</b></td>
+          <td>{{ flight_inbound_adate }}</td>
+        </tr>
+        <tr>
+          <td><b>Inbound Arrival Time:</b></td>
+          <td>{{ flight_inbound_atime }}</td>
+        </tr>
+        {% endif %}
+        <tr>
+          <td><b>Seats:</b></td>
+          <td>{{ seats }}</td>
+        </tr>
+        <tr>
+          <td><b>Total Price:</b></td>
+          <td>${{ total_price }}</td>
+        </tr>
+      </table>
+
+      <p style="color: navy;"><b>Your booking code is {{ booking_id }}</b><p>
+      <p>You may use your customer and booking codes to cancel a booking.</p>
+      <p>Thank you.</p>
+    </div>
+  </div>
+{% endblock %}

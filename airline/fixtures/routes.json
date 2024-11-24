@@ -1,0 +1,82 @@
+[
+  {
+    "model": "airline.Route",
+    "pk": "1",
+    "fields": {
+      "airport_start": "1",
+      "airport_end": "2"
+    }
+  },
+  {
+    "model": "airline.Route",
+    "pk": "2",
+    "fields": {
+      "airport_start": "2",
+      "airport_end": "1"
+    }
+  },
+  {
+    "model": "airline.Route",
+    "pk": "3",
+    "fields": {
+      "airport_start": "1",
+      "airport_end": "3"
+    }
+  },
+  {
+    "model": "airline.Route",
+    "pk": "4",
+    "fields": {
+      "airport_start": "3",
+      "airport_end": "1"
+    }
+  },
+  {
+    "model": "airline.Route",
+    "pk": "5",
+    "fields": {
+      "airport_start": "1",
+      "airport_end": "4"
+    }
+  },
+  {
+    "model": "airline.Route",
+    "pk": "6",
+    "fields": {
+      "airport_start": "4",
+      "airport_end": "1"
+    }
+  },
+  {
+    "model": "airline.Route",
+    "pk": "7",
+    "fields": {
+      "airport_start": "1",
+      "airport_end": "5"
+    }
+  },
+  {
+    "model": "airline.Route",
+    "pk": "8",
+    "fields": {
+      "airport_start": "5",
+      "airport_end": "1"
+    }
+  },
+  {
+    "model": "airline.Route",
+    "pk": "9",
+    "fields": {
+      "airport_start": "1",
+      "airport_end": "6"
+    }
+  },
+  {
+    "model": "airline.Route",
+    "pk": "10",
+    "fields": {
+      "airport_start": "6",
+      "airport_end": "1"
+    }
+  }
+]

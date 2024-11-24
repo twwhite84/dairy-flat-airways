@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="page-container">
+    <h1 class="page-header">CANCEL BOOKING</h1>
+    <div class="page-panel">
+      <p>Please enter the code of the booking to cancel.</p>
+      <form action="/booking/delete/" method="post">
+        {% csrf_token %}
+        <table>
+          <tr>
+            <td>{{ form.customer_code.label_tag }}</td>
+            <td>{{ form.customer_code }}</td>
+          </tr>
+          <tr>
+            <td>{{ form.booking_id.label_tag }}</td>
+            <td>{{ form.booking_id }}</td>
+          </tr>
+        </table>
+        <input class="btn-regular" type="submit" value="Cancel Booking" />
+      </form>
+    </div>
+  </div>
+{% endblock %}

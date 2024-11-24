@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="page-container">
+    <h1 class="page-header">FLIGHTS</h1>
+
+    <div class="page-panel">
+      <form action="/search/" method="get">
+        <table id="flight-filter-layout">
+          <tr>
+            <td>{{ form.depart_loc.label_tag }}</td>
+            <td>{{ form.depart_loc }}</td>
+            <td>{{ form.depart_date_range_start.label_tag }}</td>
+            <td>{{ form.depart_date_range_start }}</td>
+            <td>{{ form.depart_date_range_end.label_tag }}</td>
+            <td>{{ form.depart_date_range_end }}</td>
+          </tr>
+
+          <tr>
+            <td>{{ form.arrive_loc.label_tag }}</td>
+            <td>{{ form.arrive_loc }}</td>
+            <td>{{ form.arrive_date_range_start.label_tag }}</td>
+            <td>{{ form.arrive_date_range_start }}</td>
+            <td>{{ form.arrive_date_range_end.label_tag }}</td>
+            <td>{{ form.arrive_date_range_end }}</td>
+          </tr>
+
+          <tr>
+            <td>{{ form.min_price.label_tag }}</td>
+            <td>{{ form.min_price }}</td>
+            <td>{{ form.max_price.label_tag }}</td>
+            <td>{{ form.max_price }}</td>
+            <td>{{ form.seats_required.label_tag }}</td>
+            <td>{{ form.seats_required }}</td>
+          </tr>
+        </table>
+
+        <input class="btn-regular" type="submit" value="Apply Filter" />
+      </form>
+      <a href="/search/clear"><button class="btn-regular">Clear Filter</button></a>
+      <a href="/basket/clear"><button class="btn-regular">Clear Basket</button></a>
+      <a href="/booking"><button class="btn-regular">Checkout</button></a>
+    </div>
+
+    <table class="flights-table">
+      <colgroup>
+        <col span="1" style="width: 5%;" />
+        <col span="1" style="width: 20%;" />
+        <col span="6" style="width: 10%;" />
+        <col span="1" style="width: 5%;" />
+        <col span="1" style="width: 10%;" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>FlightID</th>
+          <th>Route</th>
+          <th>Departure Date</th>
+          <th>Departure Time</th>
+          <th>Arrival Date</th>
+          <th>Arrival Time</th>
+          <th>Duration (min)</th>
+          <th>Price</th>
+          <th>Seats Available</th>
+          <th>Add to Basket</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for flight in page %}
+          <tr>
+            <td>{{ flight.pk }}</td>
+            <td>{{ flight.route }}</td>
+            <td>{{ flight.leaving_date_local }}</td>
+            <td>{{ flight.leaving_time_local }}</td>
+            <td>{{ flight.arrival_date_local }}</td>
+            <td>{{ flight.arrival_time_local }}</td>
+            <td>{{ flight.duration }}</td>
+            <td>${{ flight.price }}</td>
+            <td>{{ flight.seats_available }}</td>
+            <td>
+              {% if flight.seats_available > 0 %}
+                <a class="btn-mini" href="/basket/add/{{ flight.pk }}">Add</a>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <div id="pagbar">
+      <div id="pagbar-left">
+        {% if page.has_previous %}
+          <a href="{{ qstr_prev }}"><button class="btn-regular">Prev</button></a>
+        {% endif %}
+      </div>
+
+      <div id="pagbar-middle">
+        <span id="pagbar-indicator" class="current">Page {{ page.number }} of {{ page.paginator.num_pages }}</span>
+      </div>
+
+      <div id="pagbar-right">
+        {% if page.has_next %}
+          <a href="{{ qstr_next }}"><button class="btn-regular">Next</button></a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

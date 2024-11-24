@@ -1,0 +1,214 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes glow {
+  50% {
+    filter: drop-shadow(0px 0px 15px white);
+    scale: 1.05;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(45deg, blue, cyan);
+  min-height: 100vh;
+  margin: 0;
+}
+
+#splash-container {
+  max-width: 100vw;
+  /* navbar is 9vh, but setting min-height to 91 causes annoying scrollbar */
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#splash-img {
+  width: 30%;
+  animation: spin 10s linear infinite;
+}
+
+#splash-title {
+  font-size: 64pt;
+  font-family: sans-serif;
+  color: yellow;
+  text-shadow: 5px 5px red;
+}
+
+#splash-btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+#splash-btn {
+  font-family: sans-serif;
+  font-size: 32pt;
+  padding: 1rem 3rem;
+  background-color: red;
+  color: white;
+  text-shadow: 2px 2px black;
+  border: 0;
+  box-shadow: 1px 1px darkred;
+}
+
+#splash-btn:hover {
+  animation: glow 0.5s linear infinite;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  background-color: navy;
+  height: 9vh;
+}
+
+#navbar-left {
+  display: flex;
+  align-items: center;
+  width: 40vw;
+  padding-left: 3rem;
+}
+
+#navbar-icon {
+  padding-right: 1rem;
+}
+
+#navbar-right {
+  display: flex;
+  align-items: center;
+  width: 60vw;
+  justify-content: space-evenly;
+}
+
+.navbar-link {
+  font-family: sans-serif;
+  font-size: large;
+  font-weight: bold;
+  color: yellow;
+  text-decoration: none;
+}
+
+.navbar-link:hover {
+  color: orange;
+}
+
+.page-container {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.page-header {
+  font-size: 32pt;
+  font-family: sans-serif;
+  color: yellow;
+  text-shadow: 3px 3px red;
+  margin-bottom: 5px;
+}
+
+.page-panel {
+  padding: 1rem;
+  background: linear-gradient(to top, silver, white);
+  border-radius: 10px;
+  font-family: sans-serif;
+  margin-bottom: 10px;
+}
+
+#flight-filter-layout {
+  width: 100%;
+}
+
+.flights-table {
+  width: 100%;
+  border-spacing: 0;
+  background-color: white;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  /* table-layout: fixed; */
+}
+
+.flights-table td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 5px;
+}
+
+.flights-table tbody tr:hover {
+  background-color: lightskyblue;
+}
+
+.flights-table thead {
+  background-color: silver;
+}
+
+.btn-regular {
+  margin: 5px;
+  font-family: sans-serif;
+  font-size: 12pt;
+  padding: 2px 5px;
+  background-color: red;
+  color: white;
+  border: 0;
+  box-shadow: 1px 1px darkred;
+}
+
+.btn-regular:hover {
+  color: yellow;
+}
+
+.btn-mini {
+  font-family: sans-serif;
+  font-size: 10pt;
+  padding: 2px 5px;
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  box-shadow: 1px 1px darkred;
+}
+
+.btn-mini:hover {
+  color: yellow;
+}
+
+#pagbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+#pagbar-left {
+  text-align: left;
+}
+
+#pagbar-middle {
+  margin-top: 5px;
+  text-align: center;
+}
+
+#pagbar-right {
+  text-align: right;
+}
+
+#pagbar-indicator {
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+#total-price {
+  text-align: right;
+  font-size: 20pt;
+}
+
+.error-text {
+  color: red;
+}

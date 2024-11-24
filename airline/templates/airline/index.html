@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <div id="splash-container">
+    <img id="splash-img" src="{% static 'airline/images/logo.png' %}" alt="Airplane" />
+    <div>
+      <h1 id="splash-title">DAIRY FLAT AIRWAYS</h1>
+      <div id="splash-btn-container">
+        <a href="/search"><button id="splash-btn">View Flights</button></a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

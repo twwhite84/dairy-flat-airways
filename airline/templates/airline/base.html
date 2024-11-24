@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{% static 'airline/style.css' %}" />
+    <link rel="icon" href="{% static 'airline/favicon.png' %}"/>
+    <title>Dairy Flat Airways</title>
+  </head>
+  <body>
+    <div id="navbar">
+      <div id="navbar-left">
+        <img id="navbar-icon" width="40px" src="{% static 'airline/images/logo.png' %}" />
+        <a class="navbar-link" href="/">Dairy Flat Airways</a>
+      </div>
+      <div id="navbar-right">
+        <a class="navbar-link" href="/search">View Flights</a>
+        <a class="navbar-link" href="/booking">Make Booking</a>
+        <a class="navbar-link" href="/booking/delete">Cancel Booking</a>
+      </div>
+    </div>
+    {% block content %}
+
+    {% endblock %}
+  </body>
+</html>
