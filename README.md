@@ -1,7 +1,7 @@
-# dairy-flat-airways
-Assignment for Massey 159.352 Advanced Web Development
+# Dairy Flat Airways
+## Assignment for Massey 159.352 Advanced Web Development
 
-To build and run on Windows:
+To build and run from a local development server on Windows:
 1. Open Powershell
 2. Run "./BuildWindows.ps1"
 3. Run "python manage.py runserver"
