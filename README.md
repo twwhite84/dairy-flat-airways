@@ -1,6 +1,8 @@
 # Dairy Flat Airways
 ## Assignment for Massey 159.352 Advanced Web Development
 
+UPDATE 23-01-25: Site is offline for now as my free credit period has expired.
+
 This is a simple server-side rendered web app developed using Django and using a SQLite database. The site is deployed live at https://gentle-ocean-42215677ebf04e34a4856bf087c26ea9.azurewebsites.net/
 
 To build and run from a local development server on Windows:
